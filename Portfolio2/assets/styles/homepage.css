@@ -1,0 +1,187 @@
+/* Base Reset for Sticky */
+body {
+  margin: 0;
+  padding-top: 80px; /* offset for fixed header */
+}
+
+/* HEADER: Fixed on both desktop and mobile */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0f172a;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* LOGO */
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #00ffff;
+}
+
+/* NAV MENU - DESKTOP */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* HAMBURGER - Mobile Only */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 1.5rem;
+  padding: 100px;
+}
+
+.text {
+  max-width: 800px;
+  padding-right: 200px;
+}
+
+.text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.text h1 span {
+  font-style: italic;
+  font-weight: 400;
+  color: #ccc;
+  
+}
+
+.text .description {
+  font-size: 1rem;
+  margin: 1.5rem 0;
+  color: #cbd5e1;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #22d3ee;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #0ea5e9;
+}
+
+/* SOCIAL ICONS */
+.socials {
+  margin-top: 1rem;
+}
+
+.socials a img {
+  width: 30px;
+  margin-right: 1rem;
+}
+
+/* IMAGE SECTION */
+.image-container {
+  position: relative;
+  width: 280px;
+  height: 380px;
+  flex-shrink: 0;
+}
+
+.oblong-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 310px;
+  background-color: #0ea5e9;
+  border-radius: 50% / 40%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.profile-pic {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  height: auto;
+  z-index: 2;
+  border-radius: 12px;
+}
+
+/* RESPONSIVE (768px and below) */
+@media (max-width: 768px) {
+  /* Hide desktop nav, show hamburger */
+  nav {
+    display: none;
+    position: fixed;
+    top: 70px; 
+    right: 1rem;
+    width: 200px;
+    background-color: #1e293b;
+    padding: 1rem;
+    border-radius: 8px;
+    z-index: 999;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 70px 0px;
+  }
+
+  .text {
+    max-width: 100%;
+    padding: 10px;
+    padding-right: 0;
+  }
+
+  .image-container {
+    margin: 0 auto;
+  }
+}

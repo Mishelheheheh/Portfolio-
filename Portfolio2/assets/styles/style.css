@@ -1,0 +1,36 @@
+@import "aboutme.css";
+@import "homepage.css";
+@import "projects.css";
+@import "contact.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(to right, #0f172a, #1e293b);
+  color: white;
+  line-height: 1.6;
+  padding: 0 2rem;
+}
+
+.btn{
+    text-decoration: none;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit; 
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.logo a:hover {
+  color: #0ea5e9; 
+  transform: scale(1.05); 
+}
+
+html, body{
+    scroll-behavior: smooth;
+}
